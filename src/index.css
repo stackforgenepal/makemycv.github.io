@@ -674,15 +674,60 @@ body.ed #root {
   font-size: 0.92rem;
 }
 .rm {
-  background: none;
-  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 12px;
+  border: 1px solid rgba(190, 18, 60, 0.25);
+  border-radius: 7px;
+
+  background: rgba(190, 18, 60, 0.08);
   color: #be123c;
+
   font-size: 0.82rem;
-  padding: 2px 4px;
+  font-weight: 600;
   cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
 }
+
 .rm:hover {
-  text-decoration: underline;
+  background: rgba(190, 18, 60, 0.16);
+  border-color: rgba(190, 18, 60, 0.45);
+}
+
+.rm:active {
+  transform: scale(0.96);
+}
+
+/* Dark mode */
+:root[data-theme="dark"] .rm {
+  background: rgba(244, 63, 94, 0.14);
+  border-color: rgba(253, 164, 175, 0.28);
+  color: #fda4af;
+}
+
+:root[data-theme="dark"] .rm:hover {
+  background: rgba(244, 63, 94, 0.24);
+  border-color: rgba(253, 164, 175, 0.45);
+}
+
+/* System dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .rm {
+    background: rgba(244, 63, 94, 0.14);
+    border-color: rgba(253, 164, 175, 0.28);
+    color: #fda4af;
+  }
+
+  :root:not([data-theme="light"]) .rm:hover {
+    background: rgba(244, 63, 94, 0.24);
+    border-color: rgba(253, 164, 175, 0.45);
+  }
 }
 
 .fld label {
