@@ -270,7 +270,7 @@ export const STEP_DEFINITIONS = [
     subtitle: 'Separate items with commas. Sidebar templates show each on its own line.',
     type: 'profile',
     fields: [
-      ['skills', 'Skills / IT skills', 'full'],
+      ['skills', 'Skills / IT skills', 'ta'],
       ['langs', 'Languages', 'full'],
       ['interests', 'Interests', 'full']
     ]

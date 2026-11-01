@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useCv } from '@/context/CvContext'
 import { STEP_DEFINITIONS } from '@/config/constants'
 import { executeExport } from '@/lib/exportUtils'
@@ -18,7 +18,16 @@ export default function FormPanel() {
   } = useCv()
 
   const fbodyRef = useRef(null)
-  const currentStepDef = STEP_DEFINITIONS[activeStep]
+const shouldScrollAfterAddRef = useRef(false)
+const currentStepDef = STEP_DEFINITIONS[activeStep]
+
+useEffect(() => {
+  if (!shouldScrollAfterAddRef.current) return
+
+  shouldScrollAfterAddRef.current = false
+  const body = fbodyRef.current
+  if (body) body.scrollTop = body.scrollHeight
+}, [sections, activeStep])
 
   const handleNext = () => {
     if (activeStep < STEP_DEFINITIONS.length - 1) {
@@ -38,13 +47,9 @@ export default function FormPanel() {
   }
 
   const handleAddEntry = (sectionKey) => {
-    addSectionEntry(sectionKey)
-    setTimeout(() => {
-      if (fbodyRef.current) {
-        fbodyRef.current.scrollTop = fbodyRef.current.scrollHeight
-      }
-    }, 50)
-  }
+  shouldScrollAfterAddRef.current = true
+  addSectionEntry(sectionKey)
+}
 
   return (
     <div className="left">

@@ -25,16 +25,21 @@ export default function EditorHeader() {
   }
 
   const handleResetZoom = () => {
-    const rightEl = document.getElementbyId('right')
-    if(rightEL) {
-      const w = rightEl.clientwidth - 52
-      const paperW = PS[settings.size || 'a4']?.[0] || 794
-      const nextz = w > 0 ? Math.min(1, Math.max(0.4, +(w / paperW).toFixed(2))) : 1
-      setZoom(nextz)
-    } else {
-      setZoom(1)
-    }
+  const rightEl = document.getElementById('right')
+
+  if (rightEl) {
+    const availableWidth = rightEl.clientWidth - 52
+    const paperWidth = PS[settings.size || 'a4']?.[0] || 794
+
+    const nextZoom = availableWidth > 0
+      ? Math.min(1, Math.max(0.4, +(availableWidth / paperWidth).toFixed(2)))
+      : 1
+
+    setZoom(nextZoom)
+  } else {
+    setZoom(1)
   }
+}
 
   return (
     <header className="hd" id="hd">
