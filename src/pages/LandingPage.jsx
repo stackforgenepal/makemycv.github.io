@@ -50,13 +50,6 @@ export default function LandingPage() {
           <span className="thslot">
             <ThemeDropdown />
           </span>
-          <button
-            type="button"
-            className="btn g"
-            onClick={() => navigate('/templates')}
-          >
-            Sign in
-          </button>
         </div>
       </nav>
 
@@ -65,18 +58,16 @@ export default function LandingPage() {
         <div>
           <h1>Write it once. Watch it become a CV.</h1>
           <p>
-            Fill in your details, pick a layout, tweak fonts and colors, and see
-            every change on the page as you type. Export to PDF or Word when it looks
-            right.
-          </p>
+  Stackforge.cv is a free online CV builder that helps you create
+  a professional CV without starting from a blank document.
+  Choose from five beautiful CV templates, add your education,
+  experience and skills, customize your design, and download
+  your finished CV.
+</p>
           <div className="acts">
-            <button
-              type="button"
-              className="btn p"
-              onClick={() => navigate('/templates')}
-            >
-              Get started building your CV
-            </button>
+            <Link to="/templates" className="btn p">
+  Start building your free CV
+</Link>
             <button
               type="button"
               className="btn g"
