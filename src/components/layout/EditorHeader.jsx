@@ -47,8 +47,7 @@ export default function EditorHeader() {
           aria-label="MakeCV home"
         >
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="MakeCV logo" className="logo-img" />
-                  MakeMyCV
+            <img src="/Stackforge.png" alt="StackForge CV logo" className="logo-img" />
               </Link>
         </button>
         <span className="live sm">Live</span>
