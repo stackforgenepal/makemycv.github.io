@@ -49,10 +49,10 @@ export default function EditorHeader() {
           type="button"
           className="brand"
           onClick={() => navigate('/')}
-          aria-label="MakeCV home"
+          aria-label="stackforgecv home"
         >
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="MakeCV logo" className="logo-img" />
+            <img src="/logo.png" alt="stackforgecv logo" className="logo-img" />
                   MakeMyCV
               </Link>
         </button>

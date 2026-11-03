@@ -8,7 +8,7 @@ import {
 import { computeLayout } from '@/lib/pagination'
 import { ThemeProvider } from './ThemeContext'
 
-const STORAGE_KEY = 'makecv:v2'
+const STORAGE_KEY = 'stackforgecv:v2'
 
 const CvContext = createContext(null) 
 
