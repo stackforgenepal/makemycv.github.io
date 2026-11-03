@@ -39,6 +39,16 @@ export const PS = {
 //Template definitions. Each template has a unique ID, a name, a description, and a set of accent colors.
 export const TEMPLATES = [
   {
+    id: 'o',
+    name: 'Solstice',
+    desc: 'Editorial layout with a large serif name.',
+    accents: [
+      ['#f58a3c', 'Orange'],
+      ['#0f8b6d', 'Green'],
+      ['#7c3aed', 'Violet']
+    ]
+  },
+  {
     id: 'm',
     name: 'Modern Tech',
     desc: 'Dark header band with a bold accent rule.',
@@ -76,16 +86,6 @@ export const TEMPLATES = [
       ['#c8a46e', 'Sand'],
       ['#2f4bff', 'Blue'],
       ['#be123c', 'Crimson']
-    ]
-  },
-  {
-    id: 'o',
-    name: 'Solstice',
-    desc: 'Editorial layout with a large serif name.',
-    accents: [
-      ['#f58a3c', 'Orange'],
-      ['#0f8b6d', 'Green'],
-      ['#7c3aed', 'Violet']
     ]
   }
 ]

@@ -25,7 +25,7 @@ export default function TemplatesPage() {
       <nav className="top">
         <Link to="/" className="logo">
           <img src="/logo.png" alt="MakeMyCV logo" className="logo-img" />
-          MakeMyCV
+          Stackforge.CV
         </Link>
         <div>
           <span className="thslot">

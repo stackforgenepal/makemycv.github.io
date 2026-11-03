@@ -53,7 +53,7 @@ export default function EditorHeader() {
         >
           <Link to="/" className="logo">
             <img src="/logo.png" alt="stackforgecv logo" className="logo-img" />
-                  MakeMyCV
+                  Stackforge.CV
               </Link>
         </button>
         <span className="live sm">Live</span>
@@ -109,19 +109,6 @@ export default function EditorHeader() {
             <Icon name="rot" size={15} />
           </button>
         </div>
-
-        <a
-          className="oss sm"
-          href="https://github.com/makemycv/makemycv.git"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="code" size={15} />
-          <span style={{ font: 'inherit', background: 'none', padding: 0 }}>
-            Open Source
-          </span>
-          <span>1.4k ★</span>
-        </a>
 
         <ExportDropdown />
 
