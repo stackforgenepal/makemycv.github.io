@@ -42,7 +42,7 @@ export default function LandingPage() {
       <nav className="top">
         <Link to="/" className="logo">
           <img src="/logo.png" alt="stackforgecv logo" />
-          MakeMyCV
+          Stackforge.CV
         </Link>
         <div>
           <Link to="/templates">Templates</Link>
